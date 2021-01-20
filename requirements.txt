@@ -6,6 +6,7 @@ chardet==4.0.0
 click==7.1.2
 cryptography==3.3.1
 Flask==1.1.2
+Flask-Cors==3.0.10
 idna==2.10
 isodate==0.6.0
 itsdangerous==1.1.0
