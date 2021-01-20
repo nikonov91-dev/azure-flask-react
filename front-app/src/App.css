@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+}
+
+.App .l-col,
+.App .r-col{
+  border: rgb(185, 182, 200) 1px solid;
+  padding: 40px;
+  margin: 20px;
+}
+
+.App .r-col .ul-item {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.App .r-col .ul-item * {
+  margin: 10px;
+} 
