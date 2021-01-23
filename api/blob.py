@@ -2,6 +2,7 @@ from flask import request
 from . import api
 
 from azure_services.blob_manager import BlobManager
+
 blobManager = BlobManager()
 
 
@@ -13,5 +14,5 @@ def test():
 @api.route('/api/upload', methods=['POST'])
 def upload_service():
   if request.method == 'POST':
-    api.blobManager.upload_files(request.files)
+    blobManager.upload_files(request.files)
     return {'status': 200}
