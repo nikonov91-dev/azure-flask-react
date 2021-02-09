@@ -6,9 +6,8 @@
 /.pnp
 .pnp.js
 **/venv
-/.idea
-/.vscode
-
+**/.venv
+azure-function-app/.venv
 
 **/__pycache__
 **/.eslintcache

@@ -3,7 +3,6 @@ from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 
 
 # add variable
-# export AZURE_STORAGE_CONNECTION_STRING="pSWYOvxWVJINthORcmX2Yp9hPiU3TarugY9Ipd2f/+4r08pbkTiWTIHVA1SWOYT86+0qMwlesdeBGwar/0ZOvg=="
 # https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python
 # Retrieve the connection string for use with the application. The storage
 # connection string is stored in an environment variable on the machine
