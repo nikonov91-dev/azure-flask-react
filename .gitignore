@@ -7,8 +7,10 @@
 .pnp.js
 **/venv
 **/.venv
-azure-function-app/.venv
+/azure_functions/.venv
+/azure_functions/.ropeproject
 
+__pycache__
 **/__pycache__
 **/.eslintcache
 

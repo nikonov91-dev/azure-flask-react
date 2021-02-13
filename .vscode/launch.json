@@ -5,14 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "Flask",
             "type": "python",
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "__init__.py",
+                "FLASK_APP": "main.py",
                 "FLASK_ENV": "development",
-                "FLASK_DEBUG": "0"
+                "FLASK_DEBUG": "0",
+                "AZURE_STORAGE_CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=mediastorealexnikonov;AccountKey=pSWYOvxWVJINthORcmX2Yp9hPiU3TarugY9Ipd2f/+4r08pbkTiWTIHVA1SWOYT86+0qMwlesdeBGwar/0ZOvg==;EndpointSuffix=core.windows.net"
+
             },
             "args": [
                 "run",
@@ -21,7 +23,7 @@
             "jinja": true
         },
         {
-            "name": "Attach to Python Functions",
+            "name": "Azure Functions",
             "type": "python",
             "request": "attach",
             "port": 9091,
