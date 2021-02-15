@@ -13,7 +13,9 @@
                 "FLASK_APP": "main.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "0",
-                "AZURE_STORAGE_CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=mediastorealexnikonov;AccountKey=pSWYOvxWVJINthORcmX2Yp9hPiU3TarugY9Ipd2f/+4r08pbkTiWTIHVA1SWOYT86+0qMwlesdeBGwar/0ZOvg==;EndpointSuffix=core.windows.net"
+                "AZURE_STORAGE_CONNECTION_STRING": "DefaultEndpointsProtocol=https;AccountName=mediastorealexnikonov;AccountKey=pSWYOvxWVJINthORcmX2Yp9hPiU3TarugY9Ipd2f/+4r08pbkTiWTIHVA1SWOYT86+0qMwlesdeBGwar/0ZOvg==;EndpointSuffix=core.windows.net",
+                "WEATHER_API_KEY": "785050a8bbb48b3b77d73bc0c6704bd7",
+                "AZURE_STORAGE_CONTAINER_NAME": "raster-grapics"
 
             },
             "args": [

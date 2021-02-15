@@ -1,5 +1,4 @@
 from . import weather_processor
-import azure.functions as azure_func
 
 
 class WeatherProcessor:

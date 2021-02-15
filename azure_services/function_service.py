@@ -10,7 +10,10 @@ DEVELOPMENT_NAME = 'development'
 class FunctionService:
   def __init__(self):
     self.city = '?'
-    self.api_key = '785050a8bbb48b3b77d73bc0c6704bd7'
+    self.api_key = os.getenv('WEATHER_API_KEY')
+
+  def _get_weather_url(self, lat, long):
+    return f'https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={long}&exclude=current&appid={self.api_key}'
 
   def get_weather(self, lat, long):
     url = LOCAL_URL if os.getenv(DEVELOPMENT_VARIABLE) == DEVELOPMENT_NAME else AZURE_PORTAL_URL

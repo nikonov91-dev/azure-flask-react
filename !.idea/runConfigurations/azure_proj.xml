@@ -9,7 +9,7 @@
       <env name="FLASK_ENV" value="development" />
       <env name="FLASK_APP" value="app:create_app" />
     </envs>
-    <option name="SDK_HOME" value="/usr/local/bin/python3.9" />
+    <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python3" />
     <option name="WORKING_DIRECTORY" value="" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="true" />
