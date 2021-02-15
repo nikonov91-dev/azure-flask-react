@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.72576874.chunk.css",
-    "main.js": "/static/js/main.32c89f27.chunk.js",
-    "main.js.map": "/static/js/main.32c89f27.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c2b2bb75.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c2b2bb75.js.map",
-    "static/js/2.8c903fbe.chunk.js": "/static/js/2.8c903fbe.chunk.js",
-    "static/js/2.8c903fbe.chunk.js.map": "/static/js/2.8c903fbe.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.72576874.chunk.css.map": "/static/css/main.72576874.chunk.css.map",
-    "static/js/2.8c903fbe.chunk.js.LICENSE.txt": "/static/js/2.8c903fbe.chunk.js.LICENSE.txt"
+    "main.css": "/azure-flask-react/static/css/main.72576874.chunk.css",
+    "main.js": "/azure-flask-react/static/js/main.32c89f27.chunk.js",
+    "main.js.map": "/azure-flask-react/static/js/main.32c89f27.chunk.js.map",
+    "runtime-main.js": "/azure-flask-react/static/js/runtime-main.fe13f40e.js",
+    "runtime-main.js.map": "/azure-flask-react/static/js/runtime-main.fe13f40e.js.map",
+    "static/js/2.8c903fbe.chunk.js": "/azure-flask-react/static/js/2.8c903fbe.chunk.js",
+    "static/js/2.8c903fbe.chunk.js.map": "/azure-flask-react/static/js/2.8c903fbe.chunk.js.map",
+    "index.html": "/azure-flask-react/index.html",
+    "static/css/main.72576874.chunk.css.map": "/azure-flask-react/static/css/main.72576874.chunk.css.map",
+    "static/js/2.8c903fbe.chunk.js.LICENSE.txt": "/azure-flask-react/static/js/2.8c903fbe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c2b2bb75.js",
+    "static/js/runtime-main.fe13f40e.js",
     "static/js/2.8c903fbe.chunk.js",
     "static/css/main.72576874.chunk.css",
     "static/js/main.32c89f27.chunk.js"
