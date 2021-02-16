@@ -7,27 +7,16 @@ export default class WeatherMonitor extends Component {
     this.service = new WeatherService()
   }
 
-  state = {
-    long: '0',
-    lat: '0'
-  }
+  state = {city: ''}
 
   render() {
     return <div>
-      <input type="button" value={'Use my location'} onClick={this.getOnClick}/>
-      <input type="number" value={this.state.long} onChange={e => this.handleCityName(e, 'long')}
-             placeholder='longitude'/>
-      <input type="number" value={this.state.lat} onChange={e => this.handleCityName(e, 'lat')} placeholder='latitude'/>
+      <input type="text" value={this.state.city} onChange={this.handleCityName}/>
       <input value={'submit'} type="button" onClick={this.runWeatherChart}/>
     </div>
   }
 
-  getOnClick = () =>
-    navigator.geolocation.getCurrentPosition(
-      ({coords: {latitude: lat = 0,longitude: long= 0 }}) =>
-        this.setState({lat, long}))
+  handleCityName = ({target:{value}}) => this.setState({city: value})
 
-  handleCityName = ({target: {value}}, key) => this.setState({[key]: value})
-
-  runWeatherChart = () => this.service.getWeatherForCity(this.state.long, this.state.lat)
+  runWeatherChart = () => this.service.getWeatherForCity(this.state.city)
 }
