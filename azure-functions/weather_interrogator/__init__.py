@@ -2,6 +2,7 @@ import datetime
 import logging
 
 import azure.functions as azure_func
+import azure_services
 
 
 def main(mytimer: azure_func.TimerRequest) -> None:
