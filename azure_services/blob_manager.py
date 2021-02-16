@@ -11,13 +11,14 @@ from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 # the shell or application needs to be closed and reloaded to take the
 # environment variable into account.
 class BlobManager:
-  def __init__(self): 
+  def __init__(self):
+    self.azure_credentials: ''
     self.uploading_files: None
     self.stored_files: {}
     self.connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
     # Create the BlobServiceClient object which will be used to create a container client
     self.blob_service_client = BlobServiceClient.from_connection_string(self.connect_str)
-    self.container_name = os.getenv('AZURE_STORAGE_CONTAINER_NAME')
+    self.container_name = 'raster-graphics'
 
   def __getBlobClient(self, name):
     return BlobClient.from_connection_string(conn_str=self.connect_str, container_name=self.container_name, blob_name=name)
