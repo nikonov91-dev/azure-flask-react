@@ -7,8 +7,18 @@
 .pnp.js
 **/venv
 **/.venv
-azure-function-app/.venv
 
+.idea
+/.idea
+**/.idea
+.vscode
+/.vscode
+**/.vscode
+
+/azure_functions/.venv
+/azure_functions/.ropeproject
+
+__pycache__
 **/__pycache__
 **/.eslintcache
 
@@ -22,6 +32,7 @@ azure-function-app/.venv
 
 # production
 /build
+**/build
 
 # misc
 .DS_Store

@@ -1,6 +1,6 @@
 export default class WeatherService {
   constructor(apiUrl = 'http://127.0.0.1:5000/api/') {
-    this.API_WEATHER_URL = apiUrl + 'weather/';
+    this.API_WEATHER_URL = apiUrl + 'weather';
   }
 
   _resHandler = (res) => {
@@ -9,10 +9,9 @@ export default class WeatherService {
     else throw new Error(res)
   }
 
-  getWeatherForCity = (city) => {
-    fetch(this.API_WEATHER_URL + city)
+  getWeatherForCity = (long, lat) => {
+    fetch(`${this.API_WEATHER_URL}?long=${long}&lat=${lat}`)
       .then(this._resHandler)
-      .then()
       .catch(e => {
         console.log(e);
         return e
