@@ -42,8 +42,8 @@ jobs:
 
       - name: Build
         run: |
-          npm install
-          npm run-script build
+          npm --prefix /front-app install
+          npm --prefix /front-app run-script build
         env:
           REACT_DEV_SERVER_URL: ${{ secrets.REACT_DEV_SERVER_URL }},
           REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
