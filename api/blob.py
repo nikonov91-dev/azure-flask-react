@@ -9,9 +9,10 @@ route = '/api/blob/'
 
 @api.route('/', methods=['POST', 'GET'])
 def test():
-  return 'test word'
+  return 'test word 2'
 
-def test2(route):
+@api.route(route + 'test')
+def test2():
   return 'blob api testing root'
 
 
