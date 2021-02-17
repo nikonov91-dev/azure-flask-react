@@ -8,10 +8,10 @@ import {
 import FileManager from './FilesManager';
 import WeatherMonitor from './WeatherMonitor';
 import '../styles/App.css';
+import {getFrontAppUrl} from "../utils";
 
-const App = (props) => {
-  if (!REACT_DEV_FRONT_APP_URL)
-    var REACT_DEV_FRONT_APP_URL = '';
+const App = () => {
+  const REACT_DEV_FRONT_APP_URL = getFrontAppUrl();
   return <div>
     <Router>
       <NavBar/>
