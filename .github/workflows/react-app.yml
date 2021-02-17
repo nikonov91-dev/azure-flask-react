@@ -14,7 +14,8 @@ jobs:
           npm install
           npm run-script build
         env:
-          REACT_DEV_SERVER_URL: ${{ secrets.REACT_DEV_SERVER_URL }}
+          REACT_DEV_SERVER_URL: ${{ secrets.REACT_DEV_SERVER_URL }},
+          REACT_DEV_FRONT_APP_URL: ${{ secrets.nikonov91-dev.github.io/azure-flask-react/ }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3

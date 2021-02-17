@@ -7,7 +7,7 @@ blobManager = BlobManager()
 route = '/api/blob/'
 
 
-@api.route('/', methods=['POST', 'GET'])
+@api.route('/')
 def test():
   return 'test word 3'
 

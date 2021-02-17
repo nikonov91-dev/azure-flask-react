@@ -10,17 +10,19 @@ import WeatherMonitor from './WeatherMonitor';
 import '../styles/App.css';
 
 const App = (props) => {
+  if (!REACT_DEV_FRONT_APP_URL)
+    var REACT_DEV_FRONT_APP_URL = '';
   return <div>
     <Router>
       <NavBar/>
       <Switch>
-        <Route path="/files">
+        <Route path={REACT_DEV_FRONT_APP_URL + "/files"}>
           <FileManager/>
         </Route>
-        <Route path="/weather">
+        <Route path={REACT_DEV_FRONT_APP_URL + "/weather"}>
           <WeatherMonitor/>
         </Route>
-        <Route path="/">
+        <Route path={REACT_DEV_FRONT_APP_URL}>
           <div>
             <FileManager/>
             <WeatherMonitor/>
