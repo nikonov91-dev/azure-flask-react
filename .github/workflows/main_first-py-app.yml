@@ -30,7 +30,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           BRANCH: gh-pages
           FOLDER: dist
-          REPOSITORY_NAME: azure-flask-react
 
   back-build-and-deploy:
     runs-on: ubuntu-latest
