@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  back-build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,3 +33,24 @@ jobs:
         app-name: 'first-py-app'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_7edcdecca83a4354a87943f94bb32fca }}
+
+  front-build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Build
+        run: |
+          npm install
+          npm run-script build
+        env:
+          REACT_DEV_SERVER_URL: ${{ secrets.REACT_DEV_SERVER_URL }},
+          REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
+          BRANCH: gh-pages
+          FOLDER: dist
