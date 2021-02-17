@@ -1,6 +1,6 @@
 export default class BlobService {
-  constructor(apiUrl = 'http://127.0.0.1:5000/api/') {
-    this.API_BLOB_URL = apiUrl + 'blob/';
+  constructor(DEV_SERVER_URL = '127.0.0.5000/') {
+    this.API_BLOB_URL = DEV_SERVER_URL + 'api/blob/';
   }
 
   _resHandler = (res) => {

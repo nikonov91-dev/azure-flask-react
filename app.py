@@ -17,5 +17,5 @@ from weather_processor import weather_processor as wp_bp
 app.register_blueprint(wp_bp)
 
 
-# if __name__ == '__main__':
-#   app.run()
+if __name__ == '__main__':
+  app.run()
