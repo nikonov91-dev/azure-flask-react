@@ -1,5 +1,2 @@
 FLASK_ENV=development
 FLASK_APP=app:create_app
-SECRET_KEY=changeme
-DATABASE_URI=sqlite:////tmp/app.db
-AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=mediastorealexnikonov;AccountKey=pSWYOvxWVJINthORcmX2Yp9hPiU3TarugY9Ipd2f/+4r08pbkTiWTIHVA1SWOYT86+0qMwlesdeBGwar/0ZOvg==;EndpointSuffix=core.windows.net
