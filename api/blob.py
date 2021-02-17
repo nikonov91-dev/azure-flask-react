@@ -9,7 +9,7 @@ route = '/api/blob/'
 
 @api.route('/')
 def test():
-  return 'test word 4'
+  return 'test word 5'
 
 
 @api.route(route + 'upload/', methods=['POST'])
