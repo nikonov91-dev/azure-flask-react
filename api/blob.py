@@ -11,6 +11,9 @@ route = '/api/blob/'
 def test():
   return 'test word'
 
+def test2(route):
+  return 'blob api testing root'
+
 
 @api.route(route + 'upload/', methods=['POST'])
 def upload_service():
