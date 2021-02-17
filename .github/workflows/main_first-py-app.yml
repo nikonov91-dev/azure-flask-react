@@ -10,30 +10,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  back-build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@master
-
-    - name: Set up Python version
-      uses: actions/setup-python@v1
-      with:
-        python-version: '3.8'
-
-    - name: Build using AppService-Build
-      uses: azure/appservice-build@v2
-      with:
-        platform: python
-        platform-version: '3.8'
-
-    - name: 'Deploy to Azure Web App'
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'first-py-app'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7edcdecca83a4354a87943f94bb32fca }}
-
   front-build-and-deploy:
     runs-on: ubuntu-latest
     steps:
@@ -54,3 +30,29 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           BRANCH: gh-pages
           FOLDER: dist
+
+  back-build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+
+      - name: Build using AppService-Build
+        uses: azure/appservice-build@v2
+        with:
+          platform: python
+          platform-version: '3.8'
+
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'first-py-app'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_7edcdecca83a4354a87943f94bb32fca }}
+
+
