@@ -30,7 +30,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.0.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
           BRANCH: gh-pages
           FOLDER: 'front-app/build'
 
