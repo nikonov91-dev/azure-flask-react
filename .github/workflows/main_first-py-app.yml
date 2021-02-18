@@ -28,11 +28,11 @@ jobs:
           REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@3.0.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           BRANCH: gh-pages
-          FOLDER: ../build
+          FOLDER: front-app/build
 
   back-build-and-deploy:
     runs-on: ubuntu-latest
