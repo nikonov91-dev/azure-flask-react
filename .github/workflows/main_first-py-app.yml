@@ -28,7 +28,7 @@ jobs:
           REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.0.0
+        uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
           BRANCH: gh-pages
