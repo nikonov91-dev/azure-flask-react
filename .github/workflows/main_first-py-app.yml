@@ -19,20 +19,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Moving to directory
-        run: cd front-app
-
       - name: Build
         run: |
-          npm install
-          npm run-script build
+          npm --prefix front-app install
+          npm --prefix front-app run-script build
 #        env:
 #          DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
 #          REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 #          TEST: ${{ secrets.TEST }}
 
       - name: Storing env.variables
-        run: sh ./start.sh
+        run: sh front-app/start.sh
 
 
       - name: Deploy
