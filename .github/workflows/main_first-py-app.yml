@@ -22,17 +22,17 @@ jobs:
       - name: Moving to directory
         run: cd front-app
 
-#      - name: Build
-#        run: |
-#          npm install
-#          npm run-script build
+      - name: Build
+        run: |
+          npm install
+          npm run-script build
 #        env:
 #          DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
 #          REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 #          TEST: ${{ secrets.TEST }}
 
       - name: Storing env.variables
-        run: s./start.sh
+        run: sh ./start.sh
 
 
       - name: Deploy
