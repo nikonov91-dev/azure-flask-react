@@ -12,3 +12,6 @@ echo "$secrets.DEV_SERVER_URL"
 echo "second line test"
 echo "$env.secrets.DEV_SERVER_URL"
 echo "finish"
+echo
+echo ".env reading"
+while read line; do echo $line; done < .env
