@@ -29,7 +29,9 @@ jobs:
           DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
           REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
           TEST: ${{ secrets.TEST }}
-        run: sh front-app/start.sh
+        run: |
+          sh front-app/start.sh
+          echo "$DEV_SERVER_URL"
 
 
       - name: Deploy
