@@ -31,6 +31,7 @@ jobs:
           TEST: ${{ secrets.TEST }}
         run: |
           sh front-app/start.sh
+          echo "env variable DEV_SERVER_URL reading
           echo "$DEV_SERVER_URL"
 
 
