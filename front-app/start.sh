@@ -6,9 +6,9 @@ REACT_DEV_FRONT_APP_URL: $(secrets.REACT_DEV_FRONT_APP_URL)
 TEST: $(secrets.TEST)
 " > .env
 echo "dev url:"
-echo "$(DEV_SERVER_URL)"
+echo "$DEV_SERVER_URL"
 echo "first line test"
-echo "$(secrets.DEV_SERVER_URL)"
+echo "$secrets.DEV_SERVER_URL"
 echo "second line test"
-echo "$(env.secrets.DEV_SERVER_URL)"
+echo "$env.secrets.DEV_SERVER_URL"
 echo "finish"
