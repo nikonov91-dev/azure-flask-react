@@ -31,7 +31,8 @@ jobs:
           TEST: ${{ secrets.TEST }}
         run: |
           touch .env
-          echo TEST=${{ secrets.TEST }} >> .env
+          echo ${{ secrets.DEV_SERVER_URL }} | sed -e 's/\(.\)/\1 /g'
+          DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env
           while read line; do echo $line; done < .env
 
 
