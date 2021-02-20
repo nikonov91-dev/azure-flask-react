@@ -30,12 +30,9 @@ jobs:
           REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
           TEST: ${{ secrets.TEST }}
         run: |
-          sh front-app/start.sh
-          echo "env variable DEV_SERVER_URL reading"
-          echo "$DEV_SERVER_URL"
-          echo DEV_SERVER_URL
-          echo "env variable DEV_SERVER_URL reading размазанный"
-          echo DEV_SERVER_URL | sed -e 's/\(.\)/\1 /g'
+          touch .env
+          echo TEST=${{ secrets.TEST }} >> .env
+          while read line; do echo $line; done < .env
 
 
       - name: Deploy
