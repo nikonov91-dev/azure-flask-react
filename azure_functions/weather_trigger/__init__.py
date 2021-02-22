@@ -2,6 +2,8 @@ import logging
 
 import azure.functions as azure_func
 
+import pydevd_pycharm
+pydevd_pycharm.settrace('127.0.0.1', port=9091, stdoutToServer=True, stderrToServer=True)
 
 def main(req: azure_func.HttpRequest) -> azure_func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')

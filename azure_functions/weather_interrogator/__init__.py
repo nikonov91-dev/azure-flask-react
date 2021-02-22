@@ -2,8 +2,9 @@ import datetime
 import logging
 
 import azure.functions as azure_func
-import azure_services
 
+import pydevd_pycharm
+pydevd_pycharm.settrace('127.0.0.1', port=9091, stdoutToServer=True, stderrToServer=True)
 
 def main(mytimer: azure_func.TimerRequest) -> None:
     utc_timestamp = datetime.datetime.utcnow().replace(
