@@ -24,16 +24,6 @@ jobs:
           npm --prefix front-app install
           npm --prefix front-app run-script build
 
-      - name: Storing env.variables
-        env:
-          DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
-          REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
-        run: |
-          touch .env
-          echo DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env
-          echo REACT_DEV_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> .env
-
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
@@ -41,28 +31,28 @@ jobs:
           BRANCH: gh-pages
           FOLDER: 'front-app/build'
 
-#  back-build-and-deploy:
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - uses: actions/checkout@master
-#
-#      - name: Set up Python version
-#        uses: actions/setup-python@v1
-#        with:
-#          python-version: '3.8'
-#
-#      - name: Build using AppService-Build
-#        uses: azure/appservice-build@v2
-#        with:
-#          platform: python
-#          platform-version: '3.8'
-#
-#      - name: 'Deploy to Azure Web App'
-#        uses: azure/webapps-deploy@v2
-#        with:
-#          app-name: 'first-py-app'
-#          slot-name: 'production'
-#          publish-profile: ${{ secrets.AzureAppService_PublishProfile_7edcdecca83a4354a87943f94bb32fca }}
+  back-build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+
+      - name: Build using AppService-Build
+        uses: azure/appservice-build@v2
+        with:
+          platform: python
+          platform-version: '3.8'
+
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'first-py-app'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_7edcdecca83a4354a87943f94bb32fca }}
 
 
