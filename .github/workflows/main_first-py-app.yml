@@ -30,6 +30,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
           BRANCH: gh-pages
           FOLDER: 'front-app/build'
+        env:
+          DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
+          REACT_DEV_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 
   back-build-and-deploy:
     runs-on: ubuntu-latest
