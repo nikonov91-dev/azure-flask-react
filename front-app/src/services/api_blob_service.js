@@ -1,9 +1,6 @@
-import {getServerUrl} from "../utils";
-
 export default class BlobService {
   constructor() {
-    const REACT_DEV_SERVER_URL = getServerUrl();
-    this.API_BLOB_URL = REACT_DEV_SERVER_URL + 'api/blob/';
+    this.API_BLOB_URL = process.env.DEV_SERVER_URL + 'api/blob/';
   }
 
   _resHandler = (res) => {

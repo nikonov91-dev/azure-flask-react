@@ -1,6 +1,6 @@
 export default class WeatherService {
-  constructor(apiUrl = 'http://127.0.0.1:5000/api/') {
-    this.API_WEATHER_URL = apiUrl + 'weather';
+  constructor() {
+    this.API_WEATHER_URL = process.env.DEV_SERVER_URL + 'api/weather';
   }
 
   _resHandler = (res) => {

@@ -23,6 +23,8 @@ __pycache__
 **/.eslintcache
 
 #local files
+.env
+**/.env
 /*.db
 /*.min.css
 **/*.db

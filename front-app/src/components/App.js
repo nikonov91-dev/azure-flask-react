@@ -8,21 +8,21 @@ import {
 import FileManager from './FilesManager';
 import WeatherMonitor from './WeatherMonitor';
 import '../styles/App.css';
-import {getFrontAppUrl} from "../utils";
+import dotenv from 'dotenv';
+dotenv.config({debug: true})
 
 const App = () => {
-  const REACT_DEV_FRONT_APP_URL = getFrontAppUrl();
   return <div>
     <Router>
       <NavBar/>
       <Switch>
-        <Route path={REACT_DEV_FRONT_APP_URL + "/files"}>
+        <Route path={process.env.REACT_DEV_FRONT_APP_URL + "/files"}>
           <FileManager/>
         </Route>
-        <Route path={REACT_DEV_FRONT_APP_URL + "/weather"}>
+        <Route path={process.env.REACT_DEV_FRONT_APP_URL + "/weather"}>
           <WeatherMonitor/>
         </Route>
-        <Route path={REACT_DEV_FRONT_APP_URL}>
+        <Route path={process.env.REACT_DEV_FRONT_APP_URL}>
           <div>
             <FileManager/>
             <WeatherMonitor/>
@@ -35,7 +35,7 @@ const App = () => {
 
 export default App;
 
-const NavBar = (props) => {
+const NavBar = () => {
   return <div>
     <nav>
       <ul>
