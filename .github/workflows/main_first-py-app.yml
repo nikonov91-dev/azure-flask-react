@@ -19,11 +19,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build
-        run: |
-          npm --prefix front-app install
-          npm --prefix front-app run-script build:staging
-
       - name: Store variables
         env:
           REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
@@ -32,6 +27,11 @@ jobs:
           touch .env.staging
           echo REACT_APP_FRONT_APP_URL=${{ REACT_DEV_FRONT_APP_URL }} >> .env.staging
           echo REACT_APP_DEV_SERVER_URL=${{ DEV_SERVER_URL }} >> .env.staging
+
+      - name: Build
+        run: |
+        npm --prefix front-app install
+        npm --prefix front-app run-script build:staging
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
