@@ -1,3 +1,4 @@
+require('dotenv').config();
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -8,8 +9,7 @@ import {
 import FileManager from './FilesManager';
 import WeatherMonitor from './WeatherMonitor';
 import '../styles/App.css';
-import dotenv from 'dotenv';
-dotenv.config({debug: true})
+
 
 const App = () => {
   return <div>
