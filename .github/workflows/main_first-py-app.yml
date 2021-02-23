@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: |
           npm --prefix front-app install
-          npm --prefix front-app run-script build
+          npm --prefix front-app run-script build:staging
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0

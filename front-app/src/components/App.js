@@ -1,4 +1,3 @@
-import dotevn from 'dotenv';
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -9,7 +8,6 @@ import {
 import FileManager from './FilesManager';
 import WeatherMonitor from './WeatherMonitor';
 import '../styles/App.css';
-dotevn.config()
 
 
 const App = () => {
