@@ -17,13 +17,13 @@ const App = () => {
     <Router>
       <NavBar/>
       <Switch>
-        <Route path={process.env.REACT_DEV_FRONT_APP_URL + "/files"}>
+        <Route path={process.env.REACT_APP_FRONT_APP_URL + "/files"}>
           <FileManager/>
         </Route>
-        <Route path={process.env.REACT_DEV_FRONT_APP_URL + "/weather"}>
+        <Route path={process.env.REACT_APP_FRONT_APP_URL + "/weather"}>
           <WeatherMonitor/>
         </Route>
-        <Route path={process.env.REACT_DEV_FRONT_APP_URL}>
+        <Route path={process.env.REACT_APP_FRONT_APP_URL}>
           <div>
             <FileManager/>
             <WeatherMonitor/>

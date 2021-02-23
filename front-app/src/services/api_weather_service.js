@@ -1,6 +1,6 @@
 export default class WeatherService {
   constructor() {
-    this.API_WEATHER_URL = process.env.DEV_SERVER_URL + 'api/weather';
+    this.API_WEATHER_URL = process.env.REACT_APP_DEV_SERVER_URL + 'api/weather';
   }
 
   _resHandler = (res) => {

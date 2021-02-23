@@ -1,6 +1,6 @@
 export default class BlobService {
   constructor() {
-    this.API_BLOB_URL = process.env.DEV_SERVER_URL + 'api/blob/';
+    this.API_BLOB_URL = process.env.REACT_APP_DEV_SERVER_URL + 'api/blob/';
   }
 
   _resHandler = (res) => {
