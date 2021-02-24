@@ -25,15 +25,17 @@ jobs:
           REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
+          touch .env
+          echo REACT_APP_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> .env
+          echo REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env
           touch .env.staging
-          echo REACT_APP_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> .env.staging
-          echo REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env.staging
+          ls -l
+
 
       - name: Build
         run: |
-          ls -l
           npm --prefix front-app install
-          npm --prefix front-app run-script build:staging
+          npm --prefix front-app run-script build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
