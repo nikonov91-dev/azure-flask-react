@@ -22,9 +22,11 @@ __pycache__
 **/__pycache__
 **/.eslintcache
 
-##local files
-#.env
-#**/.env
+#local files
+.env
+**/.env
+.env.staging
+**/.env.staging
 /*.db
 /*.min.css
 **/*.db
