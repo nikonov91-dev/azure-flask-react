@@ -31,10 +31,11 @@ jobs:
 
       - name: Build
         run: |
+          cd front-app
           ls -a
           less -FX .env
-          npm --prefix front-app install
-          npm --prefix front-app run-script build
+          npm install
+          npm run-script build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
