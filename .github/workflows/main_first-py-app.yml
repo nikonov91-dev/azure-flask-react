@@ -25,7 +25,7 @@ jobs:
           REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
-          openssl base64 -A -in .env -out .env
+          openssl base64 -A -in qa.env -out qa.txt
           REACT_APP_DEV_SERVER_URL=REACT_APP_DEV_SERVER_URL | base64 --decode > .env
           REACT_APP_FRONT_APP_URL=REACT_APP_FRONT_APP_URL | base64 --decode > .env
 
