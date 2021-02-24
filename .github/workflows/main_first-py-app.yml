@@ -24,9 +24,13 @@ jobs:
           REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
           REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
-          touch front-app/build/.env.staging
-          echo REACT_APP_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> front-app/build/.env.staging
-          echo REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> front-app/build/.env.staging
+          mkdir front-app
+          cd front-app
+          mkdir build
+          cd build
+          touch .env.staging
+          echo REACT_APP_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> .env.staging
+          echo REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env.staging
 
       - name: Build
         run: |
