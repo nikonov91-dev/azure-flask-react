@@ -25,6 +25,7 @@ jobs:
           REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
+          mkdir build
           cd build
           touch .env.staging
           echo REACT_APP_FRONT_APP_URL=${{ secrets.REACT_DEV_FRONT_APP_URL }} >> .env.staging
