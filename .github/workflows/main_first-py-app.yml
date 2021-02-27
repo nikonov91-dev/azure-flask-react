@@ -36,7 +36,7 @@ jobs:
         run: |
           cd front-app
           npm set REACT_APP_FRONT_APP_URL=${REACT_APP_FRONT_APP_URL} --global
-          npm set REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL} --global
+          npm set REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL}  --global
           npm install
           npm run-script build:staging
 
