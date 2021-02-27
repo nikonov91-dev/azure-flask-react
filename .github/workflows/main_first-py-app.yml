@@ -30,10 +30,14 @@ jobs:
           REACT_APP_FRONT_APP_URL=${FRONT_APP_URL} >> .env
 
       - name: Build
+        env:
+          REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
+          REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
           npm install
-          npm run-script build:staging
+          npm run-script build:staging REACT_APP_FRONT_APP_URL=${REACT_APP_FRONT_APP_URL}
+          npm run-script build:staging REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0

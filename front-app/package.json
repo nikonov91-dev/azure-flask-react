@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:staging": "REACT_APP_FRONT_APP_URL=nikonov91-dev.github.io/azure-flask-react/ npm run build",
+    "build:staging": "npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
