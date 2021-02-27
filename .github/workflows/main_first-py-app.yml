@@ -35,7 +35,7 @@ jobs:
           REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
-          npm REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL} REACT_APP_FRONT_APP_URL=${REACT_APP_FRONT_APP_URL} install
+          npm install
           npm run-script build:staging
 
       - name: Deploy
