@@ -22,20 +22,16 @@ jobs:
       - name: Store variables
         env:
           REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
-          REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
-          openssl base64 -A -in qa.env -out qa.txt
-          REACT_APP_DEV_SERVER_URL=REACT_APP_DEV_SERVER_URL | base64 --decode > .env
-          REACT_APP_FRONT_APP_URL=REACT_APP_FRONT_APP_URL | base64 --decode > .env
+          touch .env
+          REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }} >> .env
 
       - name: Build
         run: |
           cd front-app
-          ls -a
-          less -FX .env
           npm install
-          npm run-script build
+          npm run-script build:staging
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
@@ -43,9 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
           BRANCH: gh-pages
           FOLDER: 'front-app/build'
-        env:
-          REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
-          REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
 
 #  back-build-and-deploy:
 #    runs-on: ubuntu-latest
