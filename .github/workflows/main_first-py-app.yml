@@ -36,7 +36,7 @@ jobs:
         run: |
           cd front-app
           npm install
-          npm run-script build:staging
+          npm run-script build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.0.0
