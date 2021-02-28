@@ -28,9 +28,6 @@ jobs:
           REACT_APP_DEV_SERVER_URL=${{ REACT_APP_DEV_SERVER_URL }} >> .env
 
       - name: Build
-        env:
-          REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
-          REACT_APP_FRONT_APP_URL: ${{ secrets.REACT_DEV_FRONT_APP_URL }}
         run: |
           cd front-app
           npm install
