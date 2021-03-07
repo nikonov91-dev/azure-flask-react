@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/azure-flask-react/static/css/main.52b6d9dd.chunk.css",
-    "main.js": "/azure-flask-react/static/js/main.c6f5a574.chunk.js",
-    "main.js.map": "/azure-flask-react/static/js/main.c6f5a574.chunk.js.map",
+    "main.css": "/azure-flask-react/static/css/main.1fdd14d6.chunk.css",
+    "main.js": "/azure-flask-react/static/js/main.d0ea7183.chunk.js",
+    "main.js.map": "/azure-flask-react/static/js/main.d0ea7183.chunk.js.map",
     "runtime-main.js": "/azure-flask-react/static/js/runtime-main.55e9e149.js",
     "runtime-main.js.map": "/azure-flask-react/static/js/runtime-main.55e9e149.js.map",
-    "static/js/2.480d1102.chunk.js": "/azure-flask-react/static/js/2.480d1102.chunk.js",
-    "static/js/2.480d1102.chunk.js.map": "/azure-flask-react/static/js/2.480d1102.chunk.js.map",
+    "static/js/2.6dee3e37.chunk.js": "/azure-flask-react/static/js/2.6dee3e37.chunk.js",
+    "static/js/2.6dee3e37.chunk.js.map": "/azure-flask-react/static/js/2.6dee3e37.chunk.js.map",
     "index.html": "/azure-flask-react/index.html",
-    "static/css/main.52b6d9dd.chunk.css.map": "/azure-flask-react/static/css/main.52b6d9dd.chunk.css.map",
-    "static/js/2.480d1102.chunk.js.LICENSE.txt": "/azure-flask-react/static/js/2.480d1102.chunk.js.LICENSE.txt"
+    "static/css/main.1fdd14d6.chunk.css.map": "/azure-flask-react/static/css/main.1fdd14d6.chunk.css.map",
+    "static/js/2.6dee3e37.chunk.js.LICENSE.txt": "/azure-flask-react/static/js/2.6dee3e37.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.55e9e149.js",
-    "static/js/2.480d1102.chunk.js",
-    "static/css/main.52b6d9dd.chunk.css",
-    "static/js/main.c6f5a574.chunk.js"
+    "static/js/2.6dee3e37.chunk.js",
+    "static/css/main.1fdd14d6.chunk.css",
+    "static/js/main.d0ea7183.chunk.js"
   ]
 }
