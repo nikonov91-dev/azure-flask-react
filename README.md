@@ -1,7 +1,7 @@
 This is academic project based on Python Flask and JS React
 
 ##Backend
-
+azure samples https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/storage/azure-storage-blob/samples 
 ### deploy locally backend dependency-packages
 Install python 3+, but it has been developed on 3.8 and works for sure
 Go to **f-r** => **flask_modules** directory
