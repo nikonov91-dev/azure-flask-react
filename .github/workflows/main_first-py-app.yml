@@ -25,7 +25,7 @@ jobs:
         run: |
           cd front-app
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL}" >> .env
+          echo "REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL}" > ./.env
 
       - name: Build
         run: |
