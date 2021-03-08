@@ -21,7 +21,7 @@ jobs:
 
       - name: Store variables
         env:
-          REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }}
+          REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
         run: |
           cd front-app
           touch .env
