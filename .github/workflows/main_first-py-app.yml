@@ -20,12 +20,11 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Store variables
-        env:
-          REACT_APP_DEV_SERVER_URL: ${{ secrets.DEV_SERVER_URL }}
         run: |
           cd front-app
+          echo REACT_APP_DEV_SERVER_URL >> $GITHUB_ENV
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL=${REACT_APP_DEV_SERVER_URL}" > ./.env
+          echo "REACT_APP_DEV_SERVER_URL=${{ env.DEV_SERVER_URL }" >> .env
 
       - name: Build
         run: |
