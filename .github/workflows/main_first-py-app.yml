@@ -22,9 +22,9 @@ jobs:
       - name: Store variables
         run: |
           cd front-app
-          echo "DEV_SERVER_URL=${{secrets.DEV_SERVER_URL}}" >> $GITHUB_ENV
+          echo "DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }}" >> $GITHUB_ENV
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL=${env.DEV_SERVER_URL}" >> .env
+          echo "REACT_APP_DEV_SERVER_URL=${{ env.DEV_SERVER_URL }}" >> .env
 
       - name: Build
         run: |
