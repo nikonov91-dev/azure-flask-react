@@ -22,14 +22,8 @@ jobs:
       - name: Store variables
         run: |
           cd front-app
-          echo "
-                _____________________________________
-  =${{ secrets.DEV_SERVER_URL }}" >> $GITHUB_ENV
           touch .env
           echo "REACT_APP_DEV_SERVER_URL='https://first-py-app.azurewebsites.net/'" >> .env
-          echo "::debug::${{ secrets.DEV_SERVER_URL }} - dev serv variable"
-          echo "::debug::${{ env.DEV_SERVER_URL }} - env dev serv variable"
-          echo "::debug::$env.DEV_SERVER_URL - env as shell dev serv variable"
 
       - name: Build
         run: |
