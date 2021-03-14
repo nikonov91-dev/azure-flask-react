@@ -23,8 +23,8 @@ jobs:
         run: |
           cd front-app
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL=${{ secrets.TEST1 }}" >> .env
-          cat .env
+          echo "REACT_APP_DEV_SERVER_URL=${{ secrets.TEST1 }}" >> .env_a
+          cat .env_a
 
       - name: Build
         run: |
