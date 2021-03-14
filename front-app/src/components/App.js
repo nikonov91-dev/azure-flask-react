@@ -15,13 +15,13 @@ const App = () => {
     <Router>
       <NavBar/>
       <Switch>
-        <Route path={location.href + "/files"}>
+        <Route path={window.location.href + "/files"}>
           <FileManager/>
         </Route>
-        <Route path={location.href + "/weather"}>
+        <Route path={window.location.href + "/weather"}>
           <WeatherMonitor/>
         </Route>
-        <Route path={location.href + '/'}>
+        <Route path={window.location.href + '/'}>
           <div>
             <FileManager/>
             <WeatherMonitor/>
@@ -39,13 +39,13 @@ const NavBar = () => {
     <nav>
       <ul>
         <li>
-          <Link to={location.href + '/'}>Home</Link>
+          <Link to={window.location.href + '/'}>Home</Link>
         </li>
         <li>
-          <Link to={location.href + "/files"}>FileManager</Link>
+          <Link to={window.location.href + "/files"}>FileManager</Link>
         </li>
         <li>
-          <Link to={location.href + "/weather"}>Weather</Link>
+          <Link to={window.location.href + "/weather"}>Weather</Link>
         </li>
       </ul>
     </nav>
