@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/azure-flask-react/static/css/main.1fdd14d6.chunk.css",
-    "main.js": "/azure-flask-react/static/js/main.d0ea7183.chunk.js",
-    "main.js.map": "/azure-flask-react/static/js/main.d0ea7183.chunk.js.map",
+    "main.js": "/azure-flask-react/static/js/main.c6f5a574.chunk.js",
+    "main.js.map": "/azure-flask-react/static/js/main.c6f5a574.chunk.js.map",
     "runtime-main.js": "/azure-flask-react/static/js/runtime-main.55e9e149.js",
     "runtime-main.js.map": "/azure-flask-react/static/js/runtime-main.55e9e149.js.map",
     "static/js/2.6dee3e37.chunk.js": "/azure-flask-react/static/js/2.6dee3e37.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.55e9e149.js",
     "static/js/2.6dee3e37.chunk.js",
     "static/css/main.1fdd14d6.chunk.css",
-    "static/js/main.d0ea7183.chunk.js"
+    "static/js/main.c6f5a574.chunk.js"
   ]
 }
