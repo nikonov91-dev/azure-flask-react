@@ -25,7 +25,10 @@ jobs:
           touch .env
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
           echo "test dev url from environment=${{ secrets.first-env.DEV_SERVER_URL }}" >> .env
+          echo ${{ github.repository }}
           cat .env
+          seg -i -e 's/\"homepage\": \"https:\/\/nikonov91-dev.github.io\"/\"homepage\": \"https:\/\/nikonov91-dev.github.io\${{ github.repository }}
+          cat package.json
 
       - name: Build
         run: |
