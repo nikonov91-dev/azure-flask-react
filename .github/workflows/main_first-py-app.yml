@@ -23,9 +23,8 @@ jobs:
         run: |
           cd front-app
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL=${{ secrets.TEST1 }}" >> .env_a
-          cat .env_a
-
+          echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
+          cat .env
           echo "lets try quotes"
           echo 'REACT_APP_DEV_SERVER_URL=${{ secrets.TEST }}' >> .env_quotes
           cat .env_quotes
