@@ -26,8 +26,6 @@ jobs:
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
           echo "test dev url from environment=${{ secrets.first_env.DEV_SERVER_URL }}" >> .env
           echo ::set-env name=REPO_NAME=::$(echo "$github.repository" | awk -F / '{print $2}')
-          echo $repo
-          echo $PATH
           sed -i -e "s/nikonov91-dev.github.io/nikonov91-dev.github.io\/$REPO_NAME/gi" ./package.json
           cat package.json
 
