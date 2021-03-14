@@ -24,11 +24,10 @@ jobs:
           cd front-app
           touch .env
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
-          echo "test dev url from environment=${{ secrets.first-env.DEV_SERVER_URL }}" >> .env
-          echo ${{ github.repository }}
-          cat .env
+          echo "test dev url from environment=${{ secrets.first_env.DEV_SERVER_URL }}" >> .env
           REPO_NAME=$(eval "$github.repository | awk -F / '{print $2}'")
-          seg -i -e 's/\"homepage\": \"https:\/\/nikonov91-dev.github.io\"/\"homepage\": \"https:\/\/nikonov91-dev.github.io\$REPO_NAME ./package.json
+          echo REPO_NAME
+          seg -i -e 's/\"homepage\": \"https:\/\/nikonov91-dev.github.io\"/\"homepage\": \"https:\/\/nikonov91-dev.github.io\$REPO_NAME/gi' ./package.json
           cat package.json
 
       - name: Build
