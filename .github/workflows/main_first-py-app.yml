@@ -25,6 +25,18 @@ jobs:
           touch .env
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }}" >> .env
 
+          echo "lets try quotes"
+          echo 'REACT_APP_A=${{ secrets.DEV_SERVER_URL }}' >> .env_quotes
+          cat .env_quotes
+          echo "==="
+          echo "lets try double quotes"
+          echo "REACT_APP_A=${{ secrets.DEV_SERVER_URL }}" >> .env_double_quotes
+          cat .env_double_quotes
+          echo "==="
+          echo "lets try plaintext"
+          echo "REACT_APP_A='https://first-py-app.azurewebsites.net/'" >> .env_plaintext
+          cat .env_plaintext
+
       - name: Build
         run: |
           cd front-app
