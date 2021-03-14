@@ -20,12 +20,10 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Store variables
-        env:
-          REACT_APP_FRONT_APP_URL: https://nikonov91-dev.github.io/azure-flask-react/
         run: |
           cd front-app
           touch .env
-          echo "REACT_APP_DEV_SERVER_URL='https://first-py-app.azurewebsites.net/'" >> .env
+          echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL }}" >> .env
 
       - name: Build
         run: |
