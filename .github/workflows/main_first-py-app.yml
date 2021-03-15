@@ -30,9 +30,9 @@ jobs:
           echo vr
           echo ${{ secrets.DEV_SERVER_URL }}
 
-#      - name: Build
-#        run: |
-#          cd front-app
+      - name: Build
+        run: |
+          cd front-app
 #          npm install
 #          npm run-script build
 #
