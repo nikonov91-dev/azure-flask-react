@@ -33,15 +33,15 @@ jobs:
       - name: Build
         run: |
           cd front-app
-#          npm install
-#          npm run-script build
-#
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@4.0.0
-#        with:
-#          GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
-#          BRANCH: gh-pages
-#          FOLDER: 'front-app/build'
+          npm install
+          npm run-script build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: 'front-app/build'
 
 #  back-build-and-deploy:
 #    runs-on: ubuntu-latest
