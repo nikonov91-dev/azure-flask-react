@@ -28,6 +28,7 @@ jobs:
           sed -i -e "s/nikonov91-dev.github.io/nikonov91-dev.github.io\/${{ github.event.repository.name }}/gi" ./package.json
           echo "vr=${{ secrets.DEV_SERVER_URL }}"
           echo vr
+          echo ${{ secrets.DEV_SERVER_URL }}
 
 #      - name: Build
 #        run: |
