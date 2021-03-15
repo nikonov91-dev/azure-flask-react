@@ -26,19 +26,20 @@ jobs:
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
           sed -i -e "s/nikonov91-dev.github.io/nikonov91-dev.github.io\/${{ github.event.repository.name }}/gi" ./package.json
           cat package.json
+          echo jobs[github.job].env.DEV_SERVER_URL
 
-      - name: Build
-        run: |
-          cd front-app
-          npm install
-          npm run-script build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: 'front-app/build'
+#      - name: Build
+#        run: |
+#          cd front-app
+#          npm install
+#          npm run-script build
+#
+#      - name: Deploy
+#        uses: JamesIves/github-pages-deploy-action@4.0.0
+#        with:
+#          GITHUB_TOKEN: ${{ secrets.GH_DEV_NIKONOV91_TOKEN }}
+#          BRANCH: gh-pages
+#          FOLDER: 'front-app/build'
 
 #  back-build-and-deploy:
 #    runs-on: ubuntu-latest
