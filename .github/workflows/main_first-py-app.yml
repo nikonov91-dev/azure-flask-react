@@ -25,8 +25,8 @@ jobs:
           touch .env
           echo "REACT_APP_DEV_SERVER_URL=${{ secrets.DEV_SERVER_URL_IN_REPOSITORY_SECRETS }}" >> .env
           sed -i -e "s/nikonov91-dev.github.io/nikonov91-dev.github.io\/${{ github.event.repository.name }}/gi" ./package.json
-          cat package.json
           echo "vr=jobs[${{ github.job }}]env.DEV_SERVER_URL"
+          echo vr
 
 #      - name: Build
 #        run: |
